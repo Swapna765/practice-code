@@ -1,0 +1,121 @@
+.navbar {
+  width: 100%;
+  height: 72px;
+  background: rgba(8, 17, 31, 0.88);
+  border-bottom: 1px solid rgba(38, 58, 84, 0.8);
+  backdrop-filter: blur(16px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 22px;
+  font-weight: 700;
+  color: #e8eef7;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--accent);
+  color: #ffffff;
+
+  border-radius: 10px;
+}
+
+.logo-highlight {
+  color: var(--accent);
+}
+
+/* Navigation Links */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar-link {
+  position: relative;
+  color: #8fa2bb;
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: var(--accent);
+}
+
+.navbar-link.is-active { color: var(--text); }
+.navbar-link::after { content: ""; position: absolute; left: 0; bottom: -9px; width: 0; height: 2px; background: var(--accent); transition: width .2s ease; }
+.navbar-link.is-active::after { width: 100%; }
+
+/* Analyze Button */
+
+.navbar-button {
+  padding: 11px 20px;
+
+  background: var(--accent);
+  color: #07151a;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar-button:hover {
+  background: var(--accent-strong);
+  transform: translateY(-1px);
+}
+
+.navbar-menu { display: none; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; margin: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); }
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .navbar-menu { display: flex; }
+  .navbar-links { display: none; position: absolute; top: 72px; left: 16px; right: 16px; flex-direction: column; align-items: stretch; gap: 4px; padding: 10px; border: 1px solid var(--line); border-radius: 10px; background: rgba(16, 28, 45, .98); box-shadow: 0 20px 40px rgba(0,0,0,.3); }
+  .navbar-links.is-open { display: flex; }
+  .navbar-link { padding: 12px; }
+  .navbar-link::after { display: none; }
+
+  .navbar-button {
+    padding: 9px 15px;
+  }
+
+  .navbar-logo {
+    font-size: 19px;
+  }
+
+  .navbar-button { display: none; }
+}

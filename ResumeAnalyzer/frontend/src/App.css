@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap");
+
+:root {
+	color: #17221f;
+	background: #e7eee9;
+	font-family: "DM Sans", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+.app-shell {
+	min-height: 100vh;
+	padding: 48px 20px;
+	background: radial-gradient(circle at 90% 10%, #f6d9a8 0, transparent 30%), #e7eee9;
+}
+
+.analyzer-panel {
+	width: min(760px, 100%);
+	margin: 0 auto;
+	padding: clamp(24px, 6vw, 64px);
+	background: #fffdf8;
+	border: 1px solid #c7d5cc;
+	box-shadow: 12px 12px 0 #b8cbbf;
+}
+
+.eyebrow { color: #d2643b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; }
+h1, h2 { font-family: "Space Grotesk", sans-serif; }
+h1 { max-width: 620px; font-size: clamp(2.2rem, 6vw, 4.5rem); line-height: 0.98; margin: 16px 0; }
+.intro { font-size: 1.1rem; color: #52635b; }
+form { display: grid; gap: 10px; margin-top: 36px; }
+label { font-weight: 700; margin-top: 12px; }
+input, textarea { width: 100%; padding: 14px; border: 1px solid #aabdb2; border-radius: 4px; background: #f8fbf8; font: inherit; }
+textarea { resize: vertical; }
+button { margin-top: 12px; padding: 15px 20px; border: 0; border-radius: 4px; background: #d2643b; color: white; font: inherit; font-weight: 700; cursor: pointer; }
+button:disabled { opacity: 0.6; cursor: wait; }
+.file-name { color: #52635b; font-size: 0.9rem; }
+.error-message { padding: 12px; color: #8b291f; background: #fbe5df; }
+.result-panel { margin-top: 40px; padding-top: 28px; border-top: 1px solid #c7d5cc; }
+.score-row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.score-row strong { color: #d2643b; font: 700 2rem "Space Grotesk", sans-serif; }
+.result-panel li { margin: 8px 0; }

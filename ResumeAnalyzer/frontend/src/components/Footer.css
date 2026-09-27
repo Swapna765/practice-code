@@ -1,0 +1,136 @@
+.footer {
+  width: calc(100% - 48px);
+  max-width: 1200px;
+  margin: -60px auto 24px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #0d1929, #091321 72%);
+  border-top: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 20px;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -130px;
+  right: 12%;
+  width: 360px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(98, 214, 180, 0.08);
+  filter: blur(45px);
+  pointer-events: none;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 48px 24px 36px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(150px, 1fr);
+  gap: 30px;
+}
+
+.footer-brand h3 {
+  margin: 10px 0 14px;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.footer-brand h3 span {
+  color: var(--accent);
+}
+
+.footer-eyebrow {
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer-brand p {
+  max-width: 390px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links h4 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.footer-links a {
+  width: fit-content;
+  color: var(--muted);
+  font-size: 14px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+  transform: translateX(5px);
+}
+
+.footer-bottom {
+  width: 100%;
+  position: relative;
+  border-top: 1px solid rgba(38, 58, 84, 0.7);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  text-align: left;
+}
+
+.footer-bottom p,
+.footer-bottom span {
+  margin: 0;
+  color: #6e829d;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer {
+    width: calc(100% - 32px);
+    margin: 40px auto 16px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 36px 24px 28px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+}

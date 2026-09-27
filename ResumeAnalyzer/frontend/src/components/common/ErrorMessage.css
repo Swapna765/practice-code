@@ -1,0 +1,24 @@
+.error-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 16px;
+
+  background: rgba(255, 141, 141, .1);
+  border: 1px solid rgba(255, 141, 141, .3);
+  border-radius: 8px;
+
+  color: var(--danger);
+}
+
+.error-message strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.error-message p {
+  font-size: 13px;
+  line-height: 1.5;
+}

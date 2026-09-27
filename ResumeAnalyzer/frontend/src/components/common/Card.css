@@ -1,0 +1,7 @@
+.common-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
